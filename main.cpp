@@ -11,7 +11,7 @@
 #include <pthread.h>
 #include <shellapi.h>
 #include <windowsx.h>
-
+#include <commctrl.h>
 using namespace std;
 /*  Declare Windows procedure  */
 LRESULT CALLBACK WindowProcedure (HWND, UINT, WPARAM, LPARAM);
@@ -319,50 +319,40 @@ LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT message, WPARAM wParam, LPARAM
     case WM_PAINT: {
         hdc=BeginPaint (hwnd,&ps) ;
         paint_rolan(hwnd,hdc);
-        //TextOut(hdc,50,50,temp,strlen(temp));
         EndPaint(hwnd,&ps);
     }
     break;
     case WM_TIMER:{
         RECT rect;
         GetClientRect(hwnd,&rect);
-        //SetWindowPos(hwnd,HWND_TOP,rect.left,rect.top,WIDTH,HEIGHT,SWP_NOMOVE);
         SetWindowPos(hwnd, HWND_TOPMOST, 1, 1, 1, 1,SWP_NOSIZE|SWP_NOMOVE);
     }break;
-    case WM_MOUSEMOVE: {
-        //sprintf(temp,"%d %d",mouse.x,mouse.y);
-        //InvalidateRect(hwnd,NULL,true);
-        if(is_hide){
-
-            //get_client_mouse(hwnd);
-        //if(mouse.x<=0&&mouse.y>=screent_height){
-            //ShowWindow(hwnd,SW_SHOW);
-            not_program_move=false;
-            MoveWindow(hwnd,0, 0, WIDTH, HEIGHT, FALSE);//screen_height-HEIGHT
-        //while(true)printf("is hide\n");
-            is_hide=false;
-        //}
-        }else{
-        mouse=get_client_mouse(hwnd);
-        if(mouse.x>=WIDTH-30||mouse.y<0||mouse.x<0||mouse.y>HEIGHT-30){
-        //printf("mouse leave\n");
-        //not_program_move=false;
+    case WM_MOUSELEAVE:{
         not_program_move=true;
         MoveWindow(hwnd,1-WIDTH,1-HEIGHT, WIDTH, HEIGHT, FALSE);// screen_height-5
         is_hide=true;
-        }
+    }
+        break;
+    case WM_MOUSEHOVER:
+        break;
+    case WM_MOUSEMOVE: {
+        TRACKMOUSEEVENT trmouse;
+        trmouse.cbSize = sizeof(TRACKMOUSEEVENT);
+        trmouse.dwFlags = TME_LEAVE | TME_HOVER;// | TME_NONCLIENT
+        trmouse.dwHoverTime = 2000;
+        trmouse.hwndTrack = hwnd;
+        if(!_TrackMouseEvent(&trmouse))
+        return FALSE;
+        if(is_hide){
+            not_program_move=false;
+            MoveWindow(hwnd,0, 0, WIDTH, HEIGHT, FALSE);
+            is_hide=false;
+        }else{
         if(update_current_group_and_item(hwnd))
             InvalidateRect(hwnd,NULL,true);
         }
     }
     break;
-    /*case WM_NCHITTEST:{
-        static POINT mouse;
-        GetCursorPos(&mouse);//获取鼠标的屏幕坐标
-        sprintf(temp,"%d %d",mouse.x,mouse.y);
-        InvalidateRect(hwnd,NULL,true);
-    }
-    break;*/
     case WM_MOUSEWHEEL: { //0x020A
         int flag=0;
         if( (INT)wParam > 0 ) {
@@ -393,7 +383,6 @@ LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT message, WPARAM wParam, LPARAM
     }
     break;
     case WM_DESTROY:
-        //ReleaseCapture () ;
         KillTimer(hwnd,0);
         PostQuitMessage (0);       /* send a WM_QUIT to the message queue */
         break;
