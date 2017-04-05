@@ -50,8 +50,8 @@ C:\Program Files\PuTTY\putty.exe
 C:\Program Files\PuTTY\putty.exe
 
 BlockQQAds
-C:\bin\0自写自用\BlockQQAds.exe
-C:\bin\0自写自用\BlockQQAds.exe
+C:\bin\0自写自用\BlockQQAds\BlockQQAds.exe
+C:\bin\0自写自用\BlockQQAds\BlockQQAds.exe
 
 Cent Browser
 C:\Program Files\CentBrowser\CentBrowser\Application\chrome.exe
@@ -190,7 +190,7 @@ C:\bin\TCPView\Tcpview.exe
 C:\bin\TCPView\Tcpview.exe
 
 net
-11
+12
 BaiduNetdisk
 F:\BaiduYunGuanjia\BaiduNetdisk.exe
 F:\BaiduYunGuanjia\BaiduNetdisk.exe
@@ -234,6 +234,10 @@ C:\Program Files (x86)\Vivaldi\Application\vivaldi.exe
 比特精灵
 C:\Program Files (x86)\BitSpirit\BitSpirit.exe
 C:\Program Files (x86)\BitSpirit\BitSpirit.exe
+
+坚果云
+C:\Program Files\Nutstore\Nutstore.exe
+C:\Program Files\Nutstore\Nutstore.exe
 
 office
 20

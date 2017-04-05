@@ -2,7 +2,8 @@
 MyRolan.cbp
 MyRolan.depend
 MyRolan.layout
-
+# next
+next.txt
 # Compiled Object files
 *.slo
 *.lo

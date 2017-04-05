@@ -264,9 +264,11 @@ void paint_rolan(HWND hwnd,HDC hdc1,HDC hdc) {
         if(item_count==current_item) {
             SelectObject (hdc,active_item_brush);
             SetBkColor(hdc,ACTIVE_ITEM_BKCOLOR);//设置文字背景色
-        } else {
+        } else if(item_count<gitem_num){
             SelectObject (hdc,common_item_brush);
             SetBkColor(hdc,COMMON_ITEM_BKCOLOR);//设置文字背景色
+        }else {
+            SelectObject (hdc,bk_brush);
         }
         Rectangle(hdc,left-1,top-1,left+ITEM_WIDTH,top+ITEM_HEIGHT);
         if(item_count<gitem_num)TextOut(hdc,left+ITEM_WIDTH/10,top+ITEM_HEIGHT/4,&items[item_count].name[0],items[item_count].name.length());
