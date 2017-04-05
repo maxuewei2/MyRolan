@@ -120,7 +120,8 @@ int WINAPI WinMain (HINSTANCE hThisInstance,
 }
 void remove_nextline(char* buf) {
     int l=strlen(buf);
-    buf[l-1]='\0';
+    if(buf[l-1]=='\n')
+        buf[l-1]='\0';
 }
 int load_data(HWND hwnd) {
     FILE* f=fopen("data.txt","r");
@@ -155,6 +156,7 @@ int load_data(HWND hwnd) {
             groups[i].items[j].arguments=buf;
         }
     }
+    fclose(f);
     return 0;
 }
 long get_rect_width(RECT rect) {

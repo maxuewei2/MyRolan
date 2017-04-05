@@ -1,11 +1,11 @@
 8
-³£ÓÃ
+å¸¸ç”¨
 24
-¼ªÁÖ´óÑ§ÈÏÖ¤¿Í»§¶Ë
+å‰æ—å¤§å­¦è®¤è¯å®¢æˆ·ç«¯
 C:\Drcom\DrUpdateClient\DrMain.exe
 C:\Drcom\DrUpdateClient\DrMain.exe
 
-ÍøÒ×ÔÆÒôÀÖ
+ç½‘æ˜“äº‘éŸ³ä¹
 C:\Program Files (x86)\Netease\CloudMusic\cloudmusic.exe
 C:\Program Files (x86)\Netease\CloudMusic\cloudmusic.exe
 
@@ -13,7 +13,7 @@ Google Chrome
 C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
 C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
 
-ÌÚÑ¶QQ
+è…¾è®¯QQ
 C:\Program Files (x86)\Tencent\QQ\Bin\QQScLauncher.exe
 C:\Program Files (x86)\Tencent\QQ\Bin\QQScLauncher.exe
 
@@ -21,7 +21,7 @@ faststone
 C:\bin\faststone.exe
 C:\bin\faststone.exe
 
-ËÑË÷ Everything
+æœç´¢ Everything
 C:\Program Files\Everything\Everything.exe
 C:\Program Files\Everything\Everything.exe
 
@@ -50,8 +50,8 @@ C:\Program Files\PuTTY\putty.exe
 C:\Program Files\PuTTY\putty.exe
 
 BlockQQAds
-C:\bin\0×ÔĞ´×ÔÓÃ\BlockQQAds.exe
-C:\bin\0×ÔĞ´×ÔÓÃ\BlockQQAds.exe
+C:\bin\0è‡ªå†™è‡ªç”¨\BlockQQAds.exe
+C:\bin\0è‡ªå†™è‡ªç”¨\BlockQQAds.exe
 
 Cent Browser
 C:\Program Files\CentBrowser\CentBrowser\Application\chrome.exe
@@ -61,7 +61,7 @@ Ditto
 C:\Program Files (x86)\Ditto\Ditto.exe
 C:\Program Files (x86)\Ditto\Ditto.exe
 
-Î¢ĞÅ
+å¾®ä¿¡
 C:\Program Files (x86)\Tencent\WeChat\WeChat.exe
 C:\Program Files (x86)\Tencent\WeChat\WeChat.exe
 
@@ -97,9 +97,9 @@ procmgr
 C:\Program Files (x86)\Glary Utilities 5\procmgr.exe
 C:\Program Files (x86)\Glary Utilities 5\procmgr.exe
 
-Ñ§Ï°
+å­¦ä¹ 
 6
-Áé¸ñË¹·­Òë¼Ò (x64)
+çµæ ¼æ–¯ç¿»è¯‘å®¶ (x64)
 C:\Program Files\Lingoes\Translator2\Lingoes64.exe
 C:\Program Files\Lingoes\Translator2\Lingoes64.exe
 
@@ -111,19 +111,19 @@ MiniPomodoro
 C:\bin\MiniPomodoro\MiniPomodoro.exe
 C:\bin\MiniPomodoro\MiniPomodoro.exe
 
-·¬ÇÑÍÁ¶¹
+ç•ªèŒ„åœŸè±†
 C:\Program Files\Pomotodo\pomotodo.exe
 C:\Program Files\Pomotodo\pomotodo.exe
 
-·¬ÇÑºĞ×Ó
+ç•ªèŒ„ç›’å­
 C:\Program Files (x86)\TomatoBox\TbMainWin.exe
 C:\Program Files (x86)\TomatoBox\TbMainWin.exe
 TbMonitorCsl.exe true
-Å·Â·´Êµä
+æ¬§è·¯è¯å…¸
 C:\Program Files (x86)\eudic\eudic.exe
 C:\Program Files (x86)\eudic\eudic.exe
 
-±à³Ì
+ç¼–ç¨‹
 16
 SpyLite24
 C:\bin\SpyLite\Spy++ Lite\SpyLite24.exe
@@ -196,14 +196,14 @@ F:\BaiduYunGuanjia\BaiduNetdisk.exe
 F:\BaiduYunGuanjia\BaiduNetdisk.exe
 
 IDMan
-C:\bin\IDM 6.25 Ãâ×¢²áµ¥ÎÄ¼ş³¬¼¶¾«¼ò°æ\IDMan.exe
-C:\bin\IDM 6.25 Ãâ×¢²áµ¥ÎÄ¼ş³¬¼¶¾«¼ò°æ\IDMan.exe
+C:\bin\IDM 6.25 å…æ³¨å†Œå•æ–‡ä»¶è¶…çº§ç²¾ç®€ç‰ˆ\IDMan.exe
+C:\bin\IDM 6.25 å…æ³¨å†Œå•æ–‡ä»¶è¶…çº§ç²¾ç®€ç‰ˆ\IDMan.exe
 
 Mozilla Firefox
 C:\Program Files (x86)\Mozilla Firefox\firefox.exe
 C:\Program Files (x86)\Mozilla Firefox\firefox.exe
 
-Ñ¸À×¾«¼ò°æ
+è¿…é›·ç²¾ç®€ç‰ˆ
 C:\Program Files (x86)\Thunder Network\MiniThunder\Bin\ThunderMini.exe
 C:\Program Files (x86)\Thunder Network\MiniThunder\Bin\ThunderMini.exe
 
@@ -211,9 +211,9 @@ FileZilla Client
 C:\Program Files\FileZilla FTP Client\filezilla.exe
 C:\Program Files\FileZilla FTP Client\filezilla.exe
 
-WiFi¹²Ïí´óÊ¦
-C:\Program Files (x86)\WiFi¹²Ïí´óÊ¦\WiFiMaster.exe
-C:\Program Files (x86)\WiFi¹²Ïí´óÊ¦\WiFiMaster.exe
+WiFiå…±äº«å¤§å¸ˆ
+C:\Program Files (x86)\WiFiå…±äº«å¤§å¸ˆ\WiFiMaster.exe
+C:\Program Files (x86)\WiFiå…±äº«å¤§å¸ˆ\WiFiMaster.exe
 
 hfs
 C:\bin\hfs.exe
@@ -231,7 +231,7 @@ Vivaldi
 C:\Program Files (x86)\Vivaldi\Application\vivaldi.exe
 C:\Program Files (x86)\Vivaldi\Application\vivaldi.exe
 
-±ÈÌØ¾«Áé
+æ¯”ç‰¹ç²¾çµ
 C:\Program Files (x86)\BitSpirit\BitSpirit.exe
 C:\Program Files (x86)\BitSpirit\BitSpirit.exe
 
@@ -258,8 +258,8 @@ C:\texlive\2016\bin\win32\texworks.exe
 C:\texlive\2016\bin\win32\texworks.exe
 
 UnicornViewer
-C:\bin\UVÔÄ¶ÁÆ÷ UnicornViewer+v0.22+ÂÌÉ«°æº¬×Ö¿â\UV 0.22\UnicornViewer.exe
-C:\bin\UVÔÄ¶ÁÆ÷ UnicornViewer+v0.22+ÂÌÉ«°æº¬×Ö¿â\UV 0.22\UnicornViewer.exe
+C:\bin\UVé˜…è¯»å™¨ UnicornViewer+v0.22+ç»¿è‰²ç‰ˆå«å­—åº“\UV 0.22\UnicornViewer.exe
+C:\bin\UVé˜…è¯»å™¨ UnicornViewer+v0.22+ç»¿è‰²ç‰ˆå«å­—åº“\UV 0.22\UnicornViewer.exe
 
 WinEdt 10
 C:\Program Files\WinEdt Team\WinEdt 10\WinEdt.exe
@@ -297,23 +297,23 @@ Word 2013
 C:\Program Files (x86)\Microsoft Office\Office15\WINWORD.EXE
 C:\Program Files (x86)\Microsoft Office\Office15\WINWORD.EXE
 
-WPSÎÄ×Ö
-C:\bin\WPS Office.10.1.0.6135(ÎŞÁªÍø¹¦ÄÜ)\office6\wps.exe
-C:\bin\WPS Office.10.1.0.6135(ÎŞÁªÍø¹¦ÄÜ)\office6\wps.exe
+WPSæ–‡å­—
+C:\bin\WPS Office.10.1.0.6135(æ— è”ç½‘åŠŸèƒ½)\office6\wps.exe
+C:\bin\WPS Office.10.1.0.6135(æ— è”ç½‘åŠŸèƒ½)\office6\wps.exe
 
-WPSÑİÊ¾
-C:\bin\WPS Office.10.1.0.6135(ÎŞÁªÍø¹¦ÄÜ)\office6\wpp.exe
-C:\bin\WPS Office.10.1.0.6135(ÎŞÁªÍø¹¦ÄÜ)\office6\wpp.exe
+WPSæ¼”ç¤º
+C:\bin\WPS Office.10.1.0.6135(æ— è”ç½‘åŠŸèƒ½)\office6\wpp.exe
+C:\bin\WPS Office.10.1.0.6135(æ— è”ç½‘åŠŸèƒ½)\office6\wpp.exe
 
-WPS±í¸ñ
-C:\bin\WPS Office.10.1.0.6135(ÎŞÁªÍø¹¦ÄÜ)\office6\et.exe
-C:\bin\WPS Office.10.1.0.6135(ÎŞÁªÍø¹¦ÄÜ)\office6\et.exe
+WPSè¡¨æ ¼
+C:\bin\WPS Office.10.1.0.6135(æ— è”ç½‘åŠŸèƒ½)\office6\et.exe
+C:\bin\WPS Office.10.1.0.6135(æ— è”ç½‘åŠŸèƒ½)\office6\et.exe
 
-¸öÈËÊı×ÖÍ¼Êé¹İ2.1
+ä¸ªäººæ•°å­—å›¾ä¹¦é¦†2.1
 C:\Program Files (x86)\TTKN\CAJViewer 7.2\PDL.exe
 C:\Program Files (x86)\TTKN\CAJViewer 7.2\PDL.exe
 
-¸£ê¿ÔÄ¶ÁÆ÷
+ç¦æ˜•é˜…è¯»å™¨
 C:\Program Files (x86)\Foxit Software\Foxit Reader\FoxitReader.exe
 C:\Program Files (x86)\Foxit Software\Foxit Reader\FoxitReader.exe
 
@@ -364,24 +364,24 @@ C:\Program Files (x86)\Google\Picasa3\Picasa3.exe
 C:\Program Files (x86)\Google\Picasa3\Picasa3.exe
 
 TTPlayer
-C:\bin\Ç§Ç§¾²ÌıTTplayer+v5.0.1+Õä²Ø°æ\TTPlayer.exe
-C:\bin\Ç§Ç§¾²ÌıTTplayer+v5.0.1+Õä²Ø°æ\TTPlayer.exe
+C:\bin\åƒåƒé™å¬TTplayer+v5.0.1+çè—ç‰ˆ\TTPlayer.exe
+C:\bin\åƒåƒé™å¬TTplayer+v5.0.1+çè—ç‰ˆ\TTPlayer.exe
 
-ÉäÊÖÓ°Òô
+å°„æ‰‹å½±éŸ³
 C:\Program Files (x86)\SPlayer\splayer.exe
 C:\Program Files (x86)\SPlayer\splayer.exe
 
-ÉäÊÖÓ°Òô(Ó°ÔºÄ£Ê½)
+å°„æ‰‹å½±éŸ³(å½±é™¢æ¨¡å¼)
 C:\Program Files (x86)\SPlayer\splayer.exe
 C:\Program Files (x86)\SPlayer\splayer.exe
 /htpc
-ÆäËû
+å…¶ä»–
 21
 Clover
 C:\Program Files (x86)\Clover\Clover.exe
 C:\Program Files (x86)\Clover\Clover.exe
 
-»ªÎªÊÖ»úÖúÊÖ
+åä¸ºæ‰‹æœºåŠ©æ‰‹
 C:\Program Files (x86)\HiSuite\HiSuite.exe
 C:\Program Files (x86)\HiSuite\HiSuite.exe
 
@@ -393,9 +393,9 @@ ResourceHacker
 F:\resource_hacker\ResourceHacker.exe
 F:\resource_hacker\ResourceHacker.exe
 
-µ¯´°¹ã¸æÀ¹½ØÆ÷
-C:\bin\adkiller\µ¯´°¹ã¸æÀ¹½ØÆ÷.exe
-C:\bin\adkiller\µ¯´°¹ã¸æÀ¹½ØÆ÷.exe
+å¼¹çª—å¹¿å‘Šæ‹¦æˆªå™¨
+C:\bin\adkiller\å¼¹çª—å¹¿å‘Šæ‹¦æˆªå™¨.exe
+C:\bin\adkiller\å¼¹çª—å¹¿å‘Šæ‹¦æˆªå™¨.exe
 
 Bandizip
 C:\Program Files\Bandizip\Bandizip64.exe
@@ -417,7 +417,7 @@ SSDFresh
 C:\Program Files (x86)\SSD Fresh\AbLauncher.exe
 C:\Program Files (x86)\SSD Fresh\AbLauncher.exe
 
-360Çı¶¯´óÊ¦
+360é©±åŠ¨å¤§å¸ˆ
 C:\Program Files (x86)\360\360DrvMgr\360DrvMgr.exe
 C:\Program Files (x86)\360\360DrvMgr\360DrvMgr.exe
 
@@ -461,7 +461,7 @@ Glary Utilities 5
 C:\Program Files (x86)\Glary Utilities 5\Integrator.exe
 C:\Program Files (x86)\Glary Utilities 5\Integrator.exe
 
-Î»ÖÃ
+ä½ç½®
 6
 Mine
 G:\Mine
@@ -471,18 +471,19 @@ Downloads
 C:\Users\xuewei\Downloads
 C:\Users\xuewei\Downloads
 
-¿ØÖÆÃæ°å
-%rolan%\Rolan.exe
-%rolan%\Rolan.exe
-Control
-»ØÊÕÕ¾
-%rolan%\Rolan.exe
-%rolan%\Rolan.exe
-RecycleBin
-¼ÆËã»ú
-%rolan%\Rolan.exe
-%rolan%\Rolan.exe
-Computer
-ÃüÁîÌáÊ¾·û
-%SystemRoot%\System32\cmd.exe
-%SystemRoot%\System32\cmd.exe
+æ§åˆ¶é¢æ¿
+C:\Windows\System32\control.exe
+C:\Windows\System32\control.exe
+
+å›æ”¶ç«™
+explorer.exe
+explorer.exe
+::{645FF040-5081-101B-9F08-00AA002F954E}
+è®¡ç®—æœº
+C:\Windows\explorer.exe
+C:\Windows\explorer.exe
+ ,
+å‘½ä»¤æç¤ºç¬¦
+cmd
+cmd
+/k cd /d C:\Users\xuewei\Desktop
