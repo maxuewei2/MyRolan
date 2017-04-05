@@ -34,8 +34,8 @@ typedef struct group {
     int item_num;
 } group;
 
-int WIDTH=440;
-int HEIGHT=600;
+int WIDTH=398;
+int HEIGHT=500;
 int GROUP_WIDTH=100;
 int GROUP_HEIGHT=40;
 int ITEM_WIDTH=100;
@@ -78,8 +78,8 @@ int WINAPI WinMain (HINSTANCE hThisInstance,
     wincl.cbClsExtra = 0;                      /* No extra bytes after the window class */
     wincl.cbWndExtra = 0;                      /* structure or the window instance */
     /* Use Windows's default colour as the background of the window */
-    wincl.hbrBackground = (HBRUSH) COLOR_BACKGROUND;
-
+    //wincl.hbrBackground = (HBRUSH) COLOR_BACKGROUND;
+    wincl.hbrBackground = NULL;
     /* Register the window class, and if it fails quit the program */
     if (!RegisterClassEx (&wincl))
         return 0;
@@ -100,10 +100,6 @@ int WINAPI WinMain (HINSTANCE hThisInstance,
                NULL                 /* No Window Creation data */
            );
     DWORD dwExStyle = GetWindowLong(hwnd, GWL_STYLE);
-    //dwExStyle &= ~(WS_VISIBLE);
-    //dwExStyle |= WS_EX_TOOLWINDOW;
-    //dwExStyle &= ~(WS_EX_APPWINDOW);
-    //dwExStyle |= WS_POPUP;
     dwExStyle &=~WS_CAPTION;
     SetWindowLong(hwnd, GWL_STYLE, dwExStyle);
 
@@ -187,7 +183,7 @@ int xy_to_num(int num,int columns,int width,int height,int x,int y) {
     if(n>=num)return -1;
     return n;
 }
-POINT get_client_mouse(HWND hwnd){
+POINT get_client_mouse(HWND hwnd) {
     POINT mouse;
     GetCursorPos(&mouse);//获取鼠标的屏幕坐标
     ScreenToClient(hwnd,&mouse);//转换为界面坐标
@@ -222,30 +218,30 @@ int update_current_group_and_item(HWND hwnd) {
     else current_item=n;
     return (current_group_bak!=current_group)||(current_item_bak!=current_item)?1:0;
 }
-void paint_rolan(HWND hwnd,HDC hdc) {
+void paint_rolan(HWND hwnd,HDC hdc1,HDC hdc) {
     static HBRUSH  bk_brush =CreateSolidBrush (BKCOLOR);
     static HBRUSH  common_item_brush =CreateSolidBrush (COMMON_ITEM_BKCOLOR);
     static HBRUSH  active_item_brush =CreateSolidBrush (ACTIVE_ITEM_BKCOLOR);
     static HFONT hFont;
     LOGFONT lf;
     lf.lfHeight         = 15;
-        lf.lfWidth          = 0 ;
-        lf.lfEscapement     = 0 ;
-        lf.lfOrientation      = 0 ;
-        lf.lfWeight         = 5;
-        lf.lfItalic           = 0 ;
-        lf.lfUnderline       = 0 ;
-        lf.lfStrikeOut       = 0 ;
-        lf.lfCharSet        = DEFAULT_CHARSET ;
-        lf.lfOutPrecision    = 0 ;
-        lf.lfClipPrecision    = 0 ;
-        lf.lfQuality         = 0 ;
-        lf.lfPitchAndFamily  = 0 ;
-        lstrcpy (lf.lfFaceName, _T("Arial") );
-
-        hFont = CreateFontIndirect (&lf) ;
-        SelectFont(hdc,hFont);
-        SelectObject (hdc, GetStockObject (NULL_PEN)) ;
+    lf.lfWidth          = 0 ;
+    lf.lfEscapement     = 0 ;
+    lf.lfOrientation      = 0 ;
+    lf.lfWeight         = 5;
+    lf.lfItalic           = 0 ;
+    lf.lfUnderline       = 0 ;
+    lf.lfStrikeOut       = 0 ;
+    lf.lfCharSet        = DEFAULT_CHARSET ;
+    lf.lfOutPrecision    = 0 ;
+    lf.lfClipPrecision    = 0 ;
+    lf.lfQuality         = 0 ;
+    lf.lfPitchAndFamily  = 0 ;
+    lstrcpy (lf.lfFaceName, _T("Arial") );
+    PatBlt(hdc, 0, 0, WIDTH,HEIGHT, WHITENESS); //在绘图前调用这个函数可以把背景重画，WHITENESS可以使背景透明
+    hFont = CreateFontIndirect (&lf) ;
+    SelectFont(hdc,hFont);
+    SelectObject (hdc, GetStockObject (NULL_PEN)) ;
 
     SelectObject (hdc,bk_brush);
     Rectangle(hdc,0,0,WIDTH,HEIGHT);
@@ -275,18 +271,18 @@ void paint_rolan(HWND hwnd,HDC hdc) {
     Rectangle(hdc,left-1,top-1,left+ITEM_WIDTH,top+ITEM_HEIGHT);
     TextOut(hdc,left+5,top+10,&items[current_item].name[0],items[current_item].name.length());
     //draw_line(hdc,i,0,i,N-1);
+    BitBlt(hdc1, 0, 0, WIDTH, HEIGHT, hdc, 0, 0, SRCCOPY); //将位图直接复制在设备上，关于该函数的使用有很多说明，在这里就不再提了
 }
 /*  This function is called by the Windows function DispatchMessage()  */
 
 LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
-//    static char temp[100];
     static HDC hdc;
     static PAINTSTRUCT ps ;
-    static POINT mouse;
     static bool is_hide;
     static int screen_height;
     static bool not_program_move;
+    static HDC hdcBuffer;
     switch (message) {                /* handle the messages */
     case WM_CREATE: {
         not_program_move=true;
@@ -297,15 +293,17 @@ LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT message, WPARAM wParam, LPARAM
         current_item=0;
         InvalidateRect(hwnd,NULL,true);
         SetTimer(hwnd,0,100,NULL);
-        //SetCapture (hwnd) ;
-
+        hdc = GetDC(hwnd); //获取设备
+        hdcBuffer = CreateCompatibleDC(hdc); //给设备分配一个内存空间
+        HBITMAP hBitMap = CreateCompatibleBitmap(hdc, WIDTH, HEIGHT); //创建一个cxClient, cyClient大小并且适应DC设备环境的位图
+        ReleaseDC(hwnd, hdc);
+        SelectObject(hdcBuffer, hBitMap); //将位图设置为hdcBuffer的画刷
     }
     break;
     case WM_MOVE: {
         RECT rect;
         GetWindowRect(hwnd,&rect);
-        if(not_program_move&&rect.left<=0&&rect.bottom>=screen_height){
-            //ShowWindow(hwnd,SW_HIDE);
+        if(not_program_move&&rect.left<=0&&rect.bottom>=screen_height) {
             not_program_move=false;
             MoveWindow(hwnd,1-WIDTH,1-HEIGHT, WIDTH, HEIGHT, FALSE);// screen_height-5
             not_program_move=true;
@@ -318,21 +316,22 @@ LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT message, WPARAM wParam, LPARAM
     break;
     case WM_PAINT: {
         hdc=BeginPaint (hwnd,&ps) ;
-        paint_rolan(hwnd,hdc);
+        paint_rolan(hwnd,hdc,hdcBuffer);
         EndPaint(hwnd,&ps);
     }
     break;
-    case WM_TIMER:{
+    case WM_TIMER: {
         RECT rect;
         GetClientRect(hwnd,&rect);
         SetWindowPos(hwnd, HWND_TOPMOST, 1, 1, 1, 1,SWP_NOSIZE|SWP_NOMOVE);
-    }break;
-    case WM_MOUSELEAVE:{
+    }
+    break;
+    case WM_MOUSELEAVE: {
         not_program_move=true;
         MoveWindow(hwnd,1-WIDTH,1-HEIGHT, WIDTH, HEIGHT, FALSE);// screen_height-5
         is_hide=true;
     }
-        break;
+    break;
     case WM_MOUSEHOVER:
         break;
     case WM_MOUSEMOVE: {
@@ -342,14 +341,14 @@ LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT message, WPARAM wParam, LPARAM
         trmouse.dwHoverTime = 2000;
         trmouse.hwndTrack = hwnd;
         if(!_TrackMouseEvent(&trmouse))
-        return FALSE;
-        if(is_hide){
+            return FALSE;
+        if(is_hide) {
             not_program_move=false;
             MoveWindow(hwnd,0, 0, WIDTH, HEIGHT, FALSE);
             is_hide=false;
-        }else{
-        if(update_current_group_and_item(hwnd))
-            InvalidateRect(hwnd,NULL,true);
+        } else {
+            if(update_current_group_and_item(hwnd))
+                InvalidateRect(hwnd,NULL,true);
         }
     }
     break;
