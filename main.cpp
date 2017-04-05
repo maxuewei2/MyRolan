@@ -8,11 +8,11 @@
 #include <windows.h>
 #include <string>
 #include <stdio.h>
-#include <pthread.h>
 #include <shellapi.h>
 #include <windowsx.h>
 #include <commctrl.h>
 using namespace std;
+
 /*  Declare Windows procedure  */
 LRESULT CALLBACK WindowProcedure (HWND, UINT, WPARAM, LPARAM);
 
@@ -37,9 +37,9 @@ typedef struct group {
 int WIDTH=398;
 int HEIGHT=500;
 int GROUP_WIDTH=100;
-int GROUP_HEIGHT=40;
 int ITEM_WIDTH=100;
 int ITEM_HEIGHT=40;
+int GROUP_HEIGHT=ITEM_HEIGHT;
 #define BKCOLOR    RGB(240,240,240)
 #define COMMON_ITEM_BKCOLOR    RGB(220,220,220)
 #define ACTIVE_ITEM_BKCOLOR    RGB(200,200,200)
@@ -143,7 +143,6 @@ int load_data(HWND hwnd) {
         for(int j=0; j<groups[i].item_num; j++) {
             fgets(buf,500,f);
             remove_nextline(buf);
-            buf[12]='\0';
             groups[i].items[j].name=buf;
             fgets(buf,500,f);
             remove_nextline(buf);
@@ -193,7 +192,6 @@ POINT get_client_mouse(HWND hwnd) {
 }
 int get_current_position(HWND hwnd,int& is_group) {
     POINT mouse=get_client_mouse(hwnd);
-    //printf("%d %d\n",mouse.x,mouse.y);
     if(mouse.x<0||mouse.x>WIDTH||mouse.y<0||mouse.y>HEIGHT)return -1;
     if(mouse.x<=GROUP_WIDTH) {
         is_group=1;
@@ -210,7 +208,6 @@ int update_current_group_and_item(HWND hwnd) {
     int current_item_bak=current_item;
     int is_group=1;
     int n=get_current_position(hwnd,is_group);
-    //printf("%d\n",n);
     if(n<0)return 0;
     if(is_group) {
         current_group=n;
@@ -226,53 +223,55 @@ void paint_rolan(HWND hwnd,HDC hdc1,HDC hdc) {
     static HBRUSH  active_item_brush =CreateSolidBrush (ACTIVE_ITEM_BKCOLOR);
     static HFONT hFont;
     LOGFONT lf;
-    lf.lfHeight         = 15;
-    lf.lfWidth          = 0 ;
-    lf.lfEscapement     = 0 ;
-    lf.lfOrientation      = 0 ;
-    lf.lfWeight         = 5;
-    lf.lfItalic           = 0 ;
-    lf.lfUnderline       = 0 ;
-    lf.lfStrikeOut       = 0 ;
-    lf.lfCharSet        = DEFAULT_CHARSET ;
-    lf.lfOutPrecision    = 0 ;
-    lf.lfClipPrecision    = 0 ;
-    lf.lfQuality         = 0 ;
-    lf.lfPitchAndFamily  = 0 ;
+    lf.lfHeight=ITEM_HEIGHT/2.6;
+    lf.lfWidth=0 ;
+    lf.lfEscapement=0 ;
+    lf.lfOrientation=0 ;
+    lf.lfWeight=5;
+    lf.lfItalic=0 ;
+    lf.lfUnderline=0 ;
+    lf.lfStrikeOut=0 ;
+    lf.lfCharSet=DEFAULT_CHARSET ;
+    lf.lfOutPrecision=0 ;
+    lf.lfClipPrecision=0 ;
+    lf.lfQuality=0 ;
+    lf.lfPitchAndFamily=0 ;
     lstrcpy (lf.lfFaceName, _T("Arial") );
     PatBlt(hdc, 0, 0, WIDTH,HEIGHT, WHITENESS); //在绘图前调用这个函数可以把背景重画，WHITENESS可以使背景透明
     hFont = CreateFontIndirect (&lf) ;
     SelectFont(hdc,hFont);
     SelectObject (hdc, GetStockObject (NULL_PEN)) ;
-
     SelectObject (hdc,bk_brush);
     Rectangle(hdc,0,0,WIDTH,HEIGHT);
-    SelectObject (hdc,common_item_brush);
-    SetBkColor(hdc,COMMON_ITEM_BKCOLOR);//设置文字背景色
     for(int i=0; i<group_num; i++) {
-
+        if(i==current_group) {
+            SelectObject (hdc,active_item_brush);
+            SetBkColor(hdc,ACTIVE_ITEM_BKCOLOR);//设置文字背景色
+        } else {
+            SelectObject (hdc,common_item_brush);
+            SetBkColor(hdc,COMMON_ITEM_BKCOLOR);//设置文字背景色
+        }
         Rectangle(hdc,0,i*GROUP_HEIGHT-1,GROUP_WIDTH,(i+1)*GROUP_HEIGHT);
-        TextOut(hdc,30,i*GROUP_HEIGHT+10,&groups[i].name[0],groups[i].name.length());
+        TextOut(hdc,GROUP_WIDTH/4,i*GROUP_HEIGHT+GROUP_HEIGHT/4,groups[i].name.c_str(),groups[i].name.length());
     }
-    int item_num=groups[current_group].item_num;
+    int gitem_num=groups[current_group].item_num;
     item* items=groups[current_group].items;
+    int item_num=((gitem_num-1)/item_columns+1)*item_columns;
     int item_count=0;
     while(item_count<item_num) {
         int left=GROUP_WIDTH+(item_count%item_columns)*ITEM_WIDTH;
         int top=current_top+item_count/item_columns*ITEM_HEIGHT;
+        if(item_count==current_item) {
+            SelectObject (hdc,active_item_brush);
+            SetBkColor(hdc,ACTIVE_ITEM_BKCOLOR);//设置文字背景色
+        } else {
+            SelectObject (hdc,common_item_brush);
+            SetBkColor(hdc,COMMON_ITEM_BKCOLOR);//设置文字背景色
+        }
         Rectangle(hdc,left-1,top-1,left+ITEM_WIDTH,top+ITEM_HEIGHT);
-        TextOut(hdc,left+5,top+10,&items[item_count].name[0],items[item_count].name.length());
+        if(item_count<gitem_num)TextOut(hdc,left+ITEM_WIDTH/10,top+ITEM_HEIGHT/4,&items[item_count].name[0],items[item_count].name.length());
         item_count++;
     }
-    SelectObject (hdc,active_item_brush);
-    SetBkColor(hdc,ACTIVE_ITEM_BKCOLOR);//设置文字背景色
-    Rectangle(hdc,0,current_group*GROUP_HEIGHT-1,GROUP_WIDTH,(current_group+1)*GROUP_HEIGHT);
-    TextOut(hdc,30,current_group*GROUP_HEIGHT+10,&groups[current_group].name[0],groups[current_group].name.length());
-    int left=GROUP_WIDTH+(current_item%item_columns)*ITEM_WIDTH;
-    int top=current_top+current_item/item_columns*ITEM_HEIGHT;
-    Rectangle(hdc,left-1,top-1,left+ITEM_WIDTH,top+ITEM_HEIGHT);
-    TextOut(hdc,left+5,top+10,&items[current_item].name[0],items[current_item].name.length());
-    //draw_line(hdc,i,0,i,N-1);
     BitBlt(hdc1, 0, 0, WIDTH, HEIGHT, hdc, 0, 0, SRCCOPY); //将位图直接复制在设备上，关于该函数的使用有很多说明，在这里就不再提了
 }
 /*  This function is called by the Windows function DispatchMessage()  */
