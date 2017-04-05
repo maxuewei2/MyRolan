@@ -1,0 +1,488 @@
+8
+常用
+24
+吉林大学认证客户端
+C:\Drcom\DrUpdateClient\DrMain.exe
+C:\Drcom\DrUpdateClient\DrMain.exe
+
+网易云音乐
+C:\Program Files (x86)\Netease\CloudMusic\cloudmusic.exe
+C:\Program Files (x86)\Netease\CloudMusic\cloudmusic.exe
+
+Google Chrome
+C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+
+腾讯QQ
+C:\Program Files (x86)\Tencent\QQ\Bin\QQScLauncher.exe
+C:\Program Files (x86)\Tencent\QQ\Bin\QQScLauncher.exe
+
+faststone
+C:\bin\faststone.exe
+C:\bin\faststone.exe
+
+搜索 Everything
+C:\Program Files\Everything\Everything.exe
+C:\Program Files\Everything\Everything.exe
+
+CCleaner
+C:\Program Files\CCleaner\CCleaner64.exe
+C:\Program Files\CCleaner\CCleaner64.exe
+
+Cygwin64 Terminal
+C:\cygwin64\bin\mintty.exe
+C:\cygwin64\bin\mintty.exe
+-i /Cygwin-Terminal.ico -
+hosts
+C:\bin\hosts.bat
+C:\bin\hosts.bat
+
+XX-Net
+C:\bin\XX-Net-3.2.9\start.vbs
+C:\bin\XX-Net-3.2.9\start.vbs
+
+Cmder
+C:\bin\cmder1.3.2_full\Cmder.exe
+C:\bin\cmder1.3.2_full\Cmder.exe
+
+PuTTY (64-bit)
+C:\Program Files\PuTTY\putty.exe
+C:\Program Files\PuTTY\putty.exe
+
+BlockQQAds
+C:\bin\0自写自用\BlockQQAds.exe
+C:\bin\0自写自用\BlockQQAds.exe
+
+Cent Browser
+C:\Program Files\CentBrowser\CentBrowser\Application\chrome.exe
+C:\Program Files\CentBrowser\CentBrowser\Application\chrome.exe
+
+Ditto
+C:\Program Files (x86)\Ditto\Ditto.exe
+C:\Program Files (x86)\Ditto\Ditto.exe
+
+微信
+C:\Program Files (x86)\Tencent\WeChat\WeChat.exe
+C:\Program Files (x86)\Tencent\WeChat\WeChat.exe
+
+calc
+C:\Windows\System32\calc.exe
+C:\Windows\System32\calc.exe
+
+flux
+C:\Users\xuewei\AppData\Local\FluxSoftware\Flux\flux.exe
+C:\Users\xuewei\AppData\Local\FluxSoftware\Flux\flux.exe
+
+Lantern
+C:\Users\xuewei\AppData\Roaming\Lantern\lantern.exe
+C:\Users\xuewei\AppData\Roaming\Lantern\lantern.exe
+
+Python (command line)
+C:\Python27\python.exe
+C:\Python27\python.exe
+
+Snipaste
+C:\bin\Snipaste-1.12-x64\Snipaste.exe
+C:\bin\Snipaste-1.12-x64\Snipaste.exe
+
+TicKeys
+C:\bin\Tickeys1.1.1\Release\TicKeys.exe
+C:\bin\Tickeys1.1.1\Release\TicKeys.exe
+
+Dism++x64
+C:\bin\Dism++10.1.25.2_e154e1b19568e2d1cfd73639192f786cf4a1d58c\Dism++x64.exe
+C:\bin\Dism++10.1.25.2_e154e1b19568e2d1cfd73639192f786cf4a1d58c\Dism++x64.exe
+
+procmgr
+C:\Program Files (x86)\Glary Utilities 5\procmgr.exe
+C:\Program Files (x86)\Glary Utilities 5\procmgr.exe
+
+学习
+6
+灵格斯翻译家 (x64)
+C:\Program Files\Lingoes\Translator2\Lingoes64.exe
+C:\Program Files\Lingoes\Translator2\Lingoes64.exe
+
+Pomodoro
+C:\bin\pomodoro_veryhuo.com\Pomodoro.exe
+C:\bin\pomodoro_veryhuo.com\Pomodoro.exe
+
+MiniPomodoro
+C:\bin\MiniPomodoro\MiniPomodoro.exe
+C:\bin\MiniPomodoro\MiniPomodoro.exe
+
+番茄土豆
+C:\Program Files\Pomotodo\pomotodo.exe
+C:\Program Files\Pomotodo\pomotodo.exe
+
+番茄盒子
+C:\Program Files (x86)\TomatoBox\TbMainWin.exe
+C:\Program Files (x86)\TomatoBox\TbMainWin.exe
+TbMonitorCsl.exe true
+欧路词典
+C:\Program Files (x86)\eudic\eudic.exe
+C:\Program Files (x86)\eudic\eudic.exe
+
+编程
+16
+SpyLite24
+C:\bin\SpyLite\Spy++ Lite\SpyLite24.exe
+C:\bin\SpyLite\Spy++ Lite\SpyLite24.exe
+
+Geany
+C:\Program Files (x86)\Geany\bin\geany.exe
+C:\Program Files (x86)\Geany\bin\geany.exe
+
+sublime_text
+C:\Program Files\Sublime Text 3\sublime_text.exe
+C:\Program Files\Sublime Text 3\sublime_text.exe
+
+Notepad++
+C:\Program Files (x86)\Notepad++\notepad++.exe
+C:\Program Files (x86)\Notepad++\notepad++.exe
+
+gVim 8.0
+C:\Program Files (x86)\Vim\vim80\gvim.exe
+C:\Program Files (x86)\Vim\vim80\gvim.exe
+
+CodeBlocks
+C:\Program Files (x86)\CodeBlocks\codeblocks.exe
+C:\Program Files (x86)\CodeBlocks\codeblocks.exe
+
+Eclipse Jee Neon
+C:\bin\Eclipse\eclipse\eclipse.exe
+C:\bin\Eclipse\eclipse\eclipse.exe
+
+Git Bash
+C:\Program Files\Git\git-bash.exe
+C:\Program Files\Git\git-bash.exe
+--cd-to-home
+gVim Easy 8.0
+C:\Program Files (x86)\Vim\vim80\gvim.exe
+C:\Program Files (x86)\Vim\vim80\gvim.exe
+-y
+gVim Read only 8.0
+C:\Program Files (x86)\Vim\vim80\gvim.exe
+C:\Program Files (x86)\Vim\vim80\gvim.exe
+-R
+JetBrains PyCharm Community Edition 171.3691.3 x64
+C:\Program Files (x86)\JetBrains\PyCharm Community Edition 171.3691.3\bin\pycharm64.exe
+C:\Program Files (x86)\JetBrains\PyCharm Community Edition 171.3691.3\bin\pycharm64.exe
+
+Navicat for MySQL
+C:\Program Files\PremiumSoft\Navicat for MySQL\navicat.exe
+C:\Program Files\PremiumSoft\Navicat for MySQL\navicat.exe
+
+Octave-4.2.1 (CLI)
+C:\Octave\Octave-4.2.1\octave.vbs
+C:\Octave\Octave-4.2.1\octave.vbs
+--no-gui
+Octave-4.2.1 (GUI)
+C:\Octave\Octave-4.2.1\octave.vbs
+C:\Octave\Octave-4.2.1\octave.vbs
+--force-gui
+Oracle VM VirtualBox
+C:\Program Files\Oracle\VirtualBox\VirtualBox.exe
+C:\Program Files\Oracle\VirtualBox\VirtualBox.exe
+
+Tcpview
+C:\bin\TCPView\Tcpview.exe
+C:\bin\TCPView\Tcpview.exe
+
+net
+11
+BaiduNetdisk
+F:\BaiduYunGuanjia\BaiduNetdisk.exe
+F:\BaiduYunGuanjia\BaiduNetdisk.exe
+
+IDMan
+C:\bin\IDM 6.25 免注册单文件超级精简版\IDMan.exe
+C:\bin\IDM 6.25 免注册单文件超级精简版\IDMan.exe
+
+Mozilla Firefox
+C:\Program Files (x86)\Mozilla Firefox\firefox.exe
+C:\Program Files (x86)\Mozilla Firefox\firefox.exe
+
+迅雷精简版
+C:\Program Files (x86)\Thunder Network\MiniThunder\Bin\ThunderMini.exe
+C:\Program Files (x86)\Thunder Network\MiniThunder\Bin\ThunderMini.exe
+
+FileZilla Client
+C:\Program Files\FileZilla FTP Client\filezilla.exe
+C:\Program Files\FileZilla FTP Client\filezilla.exe
+
+WiFi共享大师
+C:\Program Files (x86)\WiFi共享大师\WiFiMaster.exe
+C:\Program Files (x86)\WiFi共享大师\WiFiMaster.exe
+
+hfs
+C:\bin\hfs.exe
+C:\bin\hfs.exe
+
+LimitlessRemote
+C:\bin\LimitlessRemote\LimitlessRemote.exe
+C:\bin\LimitlessRemote\LimitlessRemote.exe
+
+PanDownload
+C:\bin\PanDownload\PanDownload.exe
+C:\bin\PanDownload\PanDownload.exe
+
+Vivaldi
+C:\Program Files (x86)\Vivaldi\Application\vivaldi.exe
+C:\Program Files (x86)\Vivaldi\Application\vivaldi.exe
+
+比特精灵
+C:\Program Files (x86)\BitSpirit\BitSpirit.exe
+C:\Program Files (x86)\BitSpirit\BitSpirit.exe
+
+office
+20
+SumatraPDF
+C:\Program Files\SumatraPDF\SumatraPDF.exe
+C:\Program Files\SumatraPDF\SumatraPDF.exe
+
+Foxmail
+C:\bin\Foxmail\Foxmail.exe
+C:\bin\Foxmail\Foxmail.exe
+
+Excel 2013
+C:\Program Files (x86)\Microsoft Office\Office15\EXCEL.EXE
+C:\Program Files (x86)\Microsoft Office\Office15\EXCEL.EXE
+
+LyX 2.2
+C:\Program Files (x86)\LyX 2.2\bin\lyx.exe
+C:\Program Files (x86)\LyX 2.2\bin\lyx.exe
+
+TeXworks editor
+C:\texlive\2016\bin\win32\texworks.exe
+C:\texlive\2016\bin\win32\texworks.exe
+
+UnicornViewer
+C:\bin\UV阅读器 UnicornViewer+v0.22+绿色版含字库\UV 0.22\UnicornViewer.exe
+C:\bin\UV阅读器 UnicornViewer+v0.22+绿色版含字库\UV 0.22\UnicornViewer.exe
+
+WinEdt 10
+C:\Program Files\WinEdt Team\WinEdt 10\WinEdt.exe
+C:\Program Files\WinEdt Team\WinEdt 10\WinEdt.exe
+
+yEd Graph Editor
+C:\Program Files\yWorks\yEd\yEd.exe
+C:\Program Files\yWorks\yEd\yEd.exe
+
+Acrobat Reader DC
+C:\Program Files (x86)\Adobe\Acrobat Reader DC\Reader\AcroRd32.exe
+C:\Program Files (x86)\Adobe\Acrobat Reader DC\Reader\AcroRd32.exe
+
+CAJViewer 7.2
+C:\Program Files (x86)\TTKN\CAJViewer 7.2\CAJVieweru.exe
+C:\Program Files (x86)\TTKN\CAJViewer 7.2\CAJVieweru.exe
+
+OneNote 2013
+C:\Program Files (x86)\Microsoft Office\Office15\ONENOTE.EXE
+C:\Program Files (x86)\Microsoft Office\Office15\ONENOTE.EXE
+
+PowerPoint 2013
+C:\Program Files (x86)\Microsoft Office\Office15\POWERPNT.EXE
+C:\Program Files (x86)\Microsoft Office\Office15\POWERPNT.EXE
+
+TeXstudio
+C:\Program Files (x86)\TeXstudio\texstudio.exe
+C:\Program Files (x86)\TeXstudio\texstudio.exe
+
+Typora
+C:\Program Files\Typora\Typora.exe
+C:\Program Files\Typora\Typora.exe
+
+Word 2013
+C:\Program Files (x86)\Microsoft Office\Office15\WINWORD.EXE
+C:\Program Files (x86)\Microsoft Office\Office15\WINWORD.EXE
+
+WPS文字
+C:\bin\WPS Office.10.1.0.6135(无联网功能)\office6\wps.exe
+C:\bin\WPS Office.10.1.0.6135(无联网功能)\office6\wps.exe
+
+WPS演示
+C:\bin\WPS Office.10.1.0.6135(无联网功能)\office6\wpp.exe
+C:\bin\WPS Office.10.1.0.6135(无联网功能)\office6\wpp.exe
+
+WPS表格
+C:\bin\WPS Office.10.1.0.6135(无联网功能)\office6\et.exe
+C:\bin\WPS Office.10.1.0.6135(无联网功能)\office6\et.exe
+
+个人数字图书馆2.1
+C:\Program Files (x86)\TTKN\CAJViewer 7.2\PDL.exe
+C:\Program Files (x86)\TTKN\CAJViewer 7.2\PDL.exe
+
+福昕阅读器
+C:\Program Files (x86)\Foxit Software\Foxit Reader\FoxitReader.exe
+C:\Program Files (x86)\Foxit Software\Foxit Reader\FoxitReader.exe
+
+media
+14
+Photoshop
+C:\Program Files\Adobe\Photoshop 7.0\Photoshop.exe
+C:\Program Files\Adobe\Photoshop 7.0\Photoshop.exe
+
+PhotoZoom
+C:\bin\wusuanfangdzsq\PhotoZoom.exe
+C:\bin\wusuanfangdzsq\PhotoZoom.exe
+
+PotPlayerMini
+C:\bin\PotPlayer1.5.40020\PotPlayer\PotPlayerMini.exe
+C:\bin\PotPlayer1.5.40020\PotPlayer\PotPlayerMini.exe
+
+foobar2000
+C:\Program Files (x86)\foobar2000\foobar2000.exe
+C:\Program Files (x86)\foobar2000\foobar2000.exe
+
+MassiGra
+F:\MassiGra 0.4\MassiGra.exe
+F:\MassiGra 0.4\MassiGra.exe
+
+AIMP
+C:\Program Files (x86)\AIMP\AIMP.exe
+C:\Program Files (x86)\AIMP\AIMP.exe
+
+Feep
+F:\Feep\Feep.exe
+F:\Feep\Feep.exe
+
+Intel(R) HD Graphics Control Panel
+C:\Windows\system32\GfxUIEx.exe
+C:\Windows\system32\GfxUIEx.exe
+
+mcool
+C:\bin\mcool\mcool.exe
+C:\bin\mcool\mcool.exe
+
+MPC-HC x64
+C:\Program Files\MPC-HC\mpc-hc64.exe
+C:\Program Files\MPC-HC\mpc-hc64.exe
+
+Picasa 3
+C:\Program Files (x86)\Google\Picasa3\Picasa3.exe
+C:\Program Files (x86)\Google\Picasa3\Picasa3.exe
+
+TTPlayer
+C:\bin\千千静听TTplayer+v5.0.1+珍藏版\TTPlayer.exe
+C:\bin\千千静听TTplayer+v5.0.1+珍藏版\TTPlayer.exe
+
+射手影音
+C:\Program Files (x86)\SPlayer\splayer.exe
+C:\Program Files (x86)\SPlayer\splayer.exe
+
+射手影音(影院模式)
+C:\Program Files (x86)\SPlayer\splayer.exe
+C:\Program Files (x86)\SPlayer\splayer.exe
+/htpc
+其他
+21
+Clover
+C:\Program Files (x86)\Clover\Clover.exe
+C:\Program Files (x86)\Clover\Clover.exe
+
+华为手机助手
+C:\Program Files (x86)\HiSuite\HiSuite.exe
+C:\Program Files (x86)\HiSuite\HiSuite.exe
+
+SpaceSniffer
+G:\Mine\Collection\SpaceSniffer_1.0_CHS\SpaceSniffer.exe
+G:\Mine\Collection\SpaceSniffer_1.0_CHS\SpaceSniffer.exe
+
+ResourceHacker
+F:\resource_hacker\ResourceHacker.exe
+F:\resource_hacker\ResourceHacker.exe
+
+弹窗广告拦截器
+C:\bin\adkiller\弹窗广告拦截器.exe
+C:\bin\adkiller\弹窗广告拦截器.exe
+
+Bandizip
+C:\Program Files\Bandizip\Bandizip64.exe
+C:\Program Files\Bandizip\Bandizip64.exe
+
+HuaweiUpdateExtractor
+C:\bin\HuaweiUpdateExtractor_0.9.9.3\HuaweiUpdateExtractor.exe
+C:\bin\HuaweiUpdateExtractor_0.9.9.3\HuaweiUpdateExtractor.exe
+
+LinuxReaderPortable
+F:\LinuxReaderPortable\LinuxReaderPortable.exe
+F:\LinuxReaderPortable\LinuxReaderPortable.exe
+
+procexp64
+C:\bin\ProcessExplorer\procexp64.exe
+C:\bin\ProcessExplorer\procexp64.exe
+
+SSDFresh
+C:\Program Files (x86)\SSD Fresh\AbLauncher.exe
+C:\Program Files (x86)\SSD Fresh\AbLauncher.exe
+
+360驱动大师
+C:\Program Files (x86)\360\360DrvMgr\360DrvMgr.exe
+C:\Program Files (x86)\360\360DrvMgr\360DrvMgr.exe
+
+CubicExplorer
+C:\Program Files (x86)\CubicExplorer\CubicExplorer.exe
+C:\Program Files (x86)\CubicExplorer\CubicExplorer.exe
+
+Customize Fences
+C:\Program Files (x86)\Stardock\Fences\Fences.exe
+C:\Program Files (x86)\Stardock\Fences\Fences.exe
+/FromDesktop
+FileHippo App Manager
+C:\Program Files (x86)\FileHippo.com\FileHippo.AppManager.exe
+C:\Program Files (x86)\FileHippo.com\FileHippo.AppManager.exe
+
+rufus-2.2p
+C:\bin\rufus\rufus-2.2p.exe
+C:\bin\rufus\rufus-2.2p.exe
+
+Simple Sticky Notes
+C:\Program Files (x86)\Simnet\Simple Sticky Notes\ssn.exe
+C:\Program Files (x86)\Simnet\Simple Sticky Notes\ssn.exe
+
+SsdReady
+C:\Program Files\CEZEO software\SsdReady\SsdReady.exe
+C:\Program Files\CEZEO software\SsdReady\SsdReady.exe
+
+Total Commander 64 bit
+C:\bin\totalcmd\TOTALCMD64.EXE
+C:\bin\totalcmd\TOTALCMD64.EXE
+
+UniExtract
+F:\uniextract\UniExtract.exe
+F:\uniextract\UniExtract.exe
+
+Autoruns64
+C:\bin\Autoruns\Autoruns64.exe
+C:\bin\Autoruns\Autoruns64.exe
+
+Glary Utilities 5
+C:\Program Files (x86)\Glary Utilities 5\Integrator.exe
+C:\Program Files (x86)\Glary Utilities 5\Integrator.exe
+
+位置
+6
+Mine
+G:\Mine
+G:\Mine
+
+Downloads
+C:\Users\xuewei\Downloads
+C:\Users\xuewei\Downloads
+
+控制面板
+%rolan%\Rolan.exe
+%rolan%\Rolan.exe
+Control
+回收站
+%rolan%\Rolan.exe
+%rolan%\Rolan.exe
+RecycleBin
+计算机
+%rolan%\Rolan.exe
+%rolan%\Rolan.exe
+Computer
+命令提示符
+%SystemRoot%\System32\cmd.exe
+%SystemRoot%\System32\cmd.exe

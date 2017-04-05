@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1491358460 source:c:\users\xuewei\desktop\myrolan\main.cpp
+	<tchar.h>
+	<windows.h>
+	<string>
+	<stdio.h>
+	<pthread.h>
+	<shellapi.h>
+	<windowsx.h>
+
