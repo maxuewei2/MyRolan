@@ -1,3 +1,8 @@
+# Codeblocks
+MyRolan.cbp
+MyRolan.depend
+MyRolan.layout
+
 # Compiled Object files
 *.slo
 *.lo
@@ -28,7 +33,3 @@
 *.out
 *.app
 
-# Codeblocks
-MyRolan.cbp
-MyRolan.depend
-MyRolan.layout
