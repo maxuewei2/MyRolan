@@ -29,6 +29,6 @@
 *.app
 
 # Codeblocks
-*.cbp
-*.depend
-*.layout
+MyRolan.cbp
+MyRolan.depend
+MyRolan.layout
