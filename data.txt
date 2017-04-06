@@ -468,20 +468,20 @@ C:\Program Files (x86)\Glary Utilities 5\Integrator.exe
 位置
 6
 Mine
+C:\Windows\explorer.exe
+C:\Windows\explorer.exe
 G:\Mine
-G:\Mine
-
 Downloads
+C:\Windows\explorer.exe
+C:\Windows\explorer.exe
 C:\Users\xuewei\Downloads
-C:\Users\xuewei\Downloads
-
 控制面板
 C:\Windows\System32\control.exe
 C:\Windows\System32\control.exe
 
 回收站
-explorer.exe
-explorer.exe
+C:\Windows\explorer.exe
+C:\Windows\explorer.exe
 ::{645FF040-5081-101B-9F08-00AA002F954E}
 计算机
 C:\Windows\explorer.exe

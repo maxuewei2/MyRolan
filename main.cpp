@@ -271,12 +271,17 @@ void paint_rolan(HWND hwnd,HDC hdc1,HDC hdc) {
             SelectObject (hdc,bk_brush);
         }
         Rectangle(hdc,left-1,top-1,left+ITEM_WIDTH,top+ITEM_HEIGHT);
-        if(item_count<gitem_num)TextOut(hdc,left+ITEM_WIDTH/10,top+ITEM_HEIGHT/4,&items[item_count].name[0],items[item_count].name.length());
+        if(item_count<gitem_num)TextOut(hdc,left+ITEM_WIDTH/10,top+ITEM_HEIGHT/4,items[item_count].name.c_str(),items[item_count].name.length());
         item_count++;
     }
     BitBlt(hdc1, 0, 0, WIDTH, HEIGHT, hdc, 0, 0, SRCCOPY); //将位图直接复制在设备上，关于该函数的使用有很多说明，在这里就不再提了
 }
 /*  This function is called by the Windows function DispatchMessage()  */
+
+string get_directory(string path){
+    int last=path.find_last_of('\\');
+    return path.substr(0,last);
+}
 
 LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
@@ -376,10 +381,10 @@ LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT message, WPARAM wParam, LPARAM
     break;
     case WM_LBUTTONUP: {
         int t;
-        if(get_current_position(hwnd,t)!=-1) {
-            char* path= &groups[current_group].items[current_item].path[0];
-            char* arguments= &groups[current_group].items[current_item].arguments[0];
-            ShellExecute(NULL, "open",path,arguments, NULL, SW_SHOWNORMAL);
+        if(get_current_position(hwnd,t)!=-1&&t==0) {
+            const char* path= groups[current_group].items[current_item].path.c_str();
+            const char* arguments= groups[current_group].items[current_item].arguments.c_str();
+            ShellExecute(NULL, "open",path,arguments, get_directory(path).c_str(), SW_SHOWNORMAL);
             InvalidateRect(hwnd,NULL,true);
         }
     }
