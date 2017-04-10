@@ -362,7 +362,7 @@ LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT message, WPARAM wParam, LPARAM
     break;
     case WM_MOUSEWHEEL: { //0x020A
         int flag=0;
-        if( (INT)wParam > 0 ) {
+        if( (INT)wParam < 0 ) {
             int temp=current_top-ITEM_HEIGHT;
             if(((groups[current_group].item_num-1)/item_columns+1)*ITEM_HEIGHT+temp>0) {
                 current_top=temp;
