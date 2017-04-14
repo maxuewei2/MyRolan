@@ -384,7 +384,71 @@ C:\Program Files (x86)\SPlayer\splayer.exe
 C:\Program Files (x86)\SPlayer\splayer.exe
 /htpc
 其他
-21
+37
+SSDFresh
+C:\Program Files (x86)\SSD Fresh\AbLauncher.exe
+C:\Program Files (x86)\SSD Fresh\AbLauncher.exe
+
+SSDFresh
+C:\Program Files (x86)\SSD Fresh\AbLauncher.exe
+C:\Program Files (x86)\SSD Fresh\AbLauncher.exe
+
+360驱动大师
+C:\Program Files (x86)\360\360DrvMgr\360DrvMgr.exe
+C:\Program Files (x86)\360\360DrvMgr\360DrvMgr.exe
+
+CubicExplorer
+C:\Program Files (x86)\CubicExplorer\CubicExplorer.exe
+C:\Program Files (x86)\CubicExplorer\CubicExplorer.exe
+
+SSDFresh
+C:\Program Files (x86)\SSD Fresh\AbLauncher.exe
+C:\Program Files (x86)\SSD Fresh\AbLauncher.exe
+
+360驱动大师
+C:\Program Files (x86)\360\360DrvMgr\360DrvMgr.exe
+C:\Program Files (x86)\360\360DrvMgr\360DrvMgr.exe
+
+CubicExplorer
+C:\Program Files (x86)\CubicExplorer\CubicExplorer.exe
+C:\Program Files (x86)\CubicExplorer\CubicExplorer.exe
+
+Fences设置
+C:\Program Files (x86)\Stardock\Fences\Fences.exe
+C:\Program Files (x86)\Stardock\Fences\Fences.exe
+/FromDesktop
+FileHippo
+C:\Program Files (x86)\FileHippo.com\FileHippo.AppManager.exe
+C:\Program Files (x86)\FileHippo.com\FileHippo.AppManager.exe
+
+Rufus
+C:\bin\rufus\rufus-2.2p.exe
+C:\bin\rufus\rufus-2.2p.exe
+
+SimpleSticky
+C:\Program Files (x86)\Simnet\Simple Sticky Notes\ssn.exe
+C:\Program Files (x86)\Simnet\Simple Sticky Notes\ssn.exe
+
+SsdReady
+C:\Program Files\CEZEO software\SsdReady\SsdReady.exe
+C:\Program Files\CEZEO software\SsdReady\SsdReady.exe
+
+TCommander
+C:\bin\totalcmd\TOTALCMD64.EXE
+C:\bin\totalcmd\TOTALCMD64.EXE
+
+UniExtract
+F:\uniextract\UniExtract.exe
+F:\uniextract\UniExtract.exe
+
+Autoruns64
+C:\bin\Autoruns\Autoruns64.exe
+C:\bin\Autoruns\Autoruns64.exe
+
+GlaryUtilities
+C:\Program Files (x86)\Glary Utilities 5\Integrator.exe
+C:\Program Files (x86)\Glary Utilities 5\Integrator.exe
+
 Clover
 C:\Program Files (x86)\Clover\Clover.exe
 C:\Program Files (x86)\Clover\Clover.exe

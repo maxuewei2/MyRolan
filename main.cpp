@@ -53,7 +53,6 @@ int current_top=0;
 int item_columns=3;
 
 
-
 int WINAPI WinMain (HINSTANCE hThisInstance,
                     HINSTANCE hPrevInstance,
                     LPSTR lpszArgument,
@@ -177,6 +176,7 @@ long get_client_height(HWND hwnd) {
     return get_rect_height(rect);
 }
 int xy_to_num(int num,int columns,int width,int height,int x,int y) {
+    if(x<0||y<0)return -1;
     int c=x/width;
     if(c>=columns)return -1;
     int r=y/height;
@@ -209,12 +209,20 @@ int update_current_group_and_item(HWND hwnd) {
     int is_group=1;
     int n=get_current_position(hwnd,is_group);
     if(n<0)return 0;
-    if(is_group) {
+    if(is_group&&n!=current_group_bak) {
         current_group=n;
         current_item=0;
-        current_top=0;
+        int num=(groups[current_group].item_num-1)/item_columns+1;
+        int half=(num-1)/2;
+        int group_height=current_group*GROUP_HEIGHT;
+        if(group_height-half*ITEM_HEIGHT<=0)
+            current_top=0;
+        else if(group_height+(num-half)*ITEM_HEIGHT>=HEIGHT)
+            current_top=HEIGHT-num*ITEM_HEIGHT;
+        else
+            current_top=group_height-half*ITEM_HEIGHT;
     }
-    else current_item=n;
+    else if(n!=current_item_bak)current_item=n;
     return (current_group_bak!=current_group)||(current_item_bak!=current_item)?1:0;
 }
 void paint_rolan(HWND hwnd,HDC hdc1,HDC hdc) {
@@ -282,7 +290,17 @@ string get_directory(string path){
     int last=path.find_last_of('\\');
     return path.substr(0,last);
 }
-
+void active_window(HWND hwnd){
+    HWND hCurWnd = NULL;
+    DWORD dwMyID;
+    DWORD   dwCurID;
+    hCurWnd = ::GetForegroundWindow();
+    dwMyID = ::GetCurrentThreadId();
+    dwCurID = ::GetWindowThreadProcessId(hCurWnd, NULL);
+    ::AttachThreadInput(dwCurID, dwMyID, TRUE);
+    ::SetForegroundWindow(hwnd);
+    ::AttachThreadInput(dwCurID, dwMyID, FALSE);
+}
 LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
     static HDC hdc;
@@ -337,6 +355,8 @@ LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT message, WPARAM wParam, LPARAM
     case WM_MOUSELEAVE: {
         not_program_move=true;
         MoveWindow(hwnd,1-WIDTH,1-HEIGHT, WIDTH, HEIGHT, FALSE);// screen_height-5
+        ShowWindow(hwnd,SW_HIDE);
+        ShowWindow(hwnd,SW_SHOW);
         is_hide=true;
     }
     break;
@@ -353,6 +373,7 @@ LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT message, WPARAM wParam, LPARAM
         if(is_hide) {
             not_program_move=false;
             MoveWindow(hwnd,0, 0, WIDTH, HEIGHT, FALSE);
+            active_window(hwnd);
             is_hide=false;
         } else {
             if(update_current_group_and_item(hwnd))
@@ -362,16 +383,19 @@ LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT message, WPARAM wParam, LPARAM
     break;
     case WM_MOUSEWHEEL: { //0x020A
         int flag=0;
-        if( (INT)wParam < 0 ) {
+        if( (INT)wParam < 0 ) {//ÉÏ»¬
             int temp=current_top-ITEM_HEIGHT;
-            if(((groups[current_group].item_num-1)/item_columns+1)*ITEM_HEIGHT+temp>0) {
-                current_top=temp;
+            int new_top=((groups[current_group].item_num-1)/item_columns+1)*ITEM_HEIGHT+temp;
+            if(new_top>0) {
+                if(new_top<ITEM_HEIGHT){current_top=0-(((groups[current_group].item_num-1)/item_columns)*ITEM_HEIGHT);}
+                else current_top=temp;
                 flag=1;
             }
         }
-        else {
+        else {//ÏÂ»¬
             if(current_top<0) {//+ITEM_HEIGHT<get_client_height(hwnd)
                 current_top+=ITEM_HEIGHT;
+                if(current_top>0){current_top=0;}
                 flag=1;
             }
         }
