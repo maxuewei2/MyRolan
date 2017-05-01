@@ -130,6 +130,12 @@ int load_data(HWND hwnd) {
     }
     char buf[500];
     fgets(buf,500,f);
+    if (groups!=NULL){
+        for(int i=0;i<group_num;i++){
+            delete [] groups[i].items;
+        }
+        delete []groups;
+    }
     sscanf(buf,"%d",&group_num);
     groups=new group[group_num];
     for(int i=0; i<group_num; i++) {
@@ -222,7 +228,7 @@ int update_current_group_and_item(HWND hwnd) {
         else
             current_top=group_height-half*ITEM_HEIGHT;
     }
-    else if(n!=current_item_bak)current_item=n;
+    else if(!is_group&&n!=current_item_bak)current_item=n;
     return (current_group_bak!=current_group)||(current_item_bak!=current_item)?1:0;
 }
 void paint_rolan(HWND hwnd,HDC hdc1,HDC hdc) {
@@ -301,6 +307,17 @@ void active_window(HWND hwnd){
     ::SetForegroundWindow(hwnd);
     ::AttachThreadInput(dwCurID, dwMyID, FALSE);
 }
+void quit(HWND hwnd){
+    KillTimer(hwnd,0);
+    //exit(0);
+}
+void init(HWND hwnd){
+    load_data(hwnd);
+    current_group=0;
+    current_item=0;
+    current_top=0;
+    InvalidateRect(hwnd,NULL,true);
+}
 LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
     static HDC hdc;
@@ -314,16 +331,13 @@ LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT message, WPARAM wParam, LPARAM
         not_program_move=true;
         is_hide=false;
         screen_height=GetSystemMetrics(SM_CYSCREEN);
-        load_data(hwnd);
-        current_group=0;
-        current_item=0;
-        InvalidateRect(hwnd,NULL,true);
         SetTimer(hwnd,0,100,NULL);
         hdc = GetDC(hwnd); //获取设备
         hdcBuffer = CreateCompatibleDC(hdc); //给设备分配一个内存空间
         HBITMAP hBitMap = CreateCompatibleBitmap(hdc, WIDTH, HEIGHT); //创建一个cxClient, cyClient大小并且适应DC设备环境的位图
         ReleaseDC(hwnd, hdc);
         SelectObject(hdcBuffer, hBitMap); //将位图设置为hdcBuffer的画刷
+        init(hwnd);
     }
     break;
     case WM_MOVE: {
@@ -338,6 +352,9 @@ LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT message, WPARAM wParam, LPARAM
     }
     break;
     case WM_KEYDOWN: { //识别按键
+        if(wParam==27) {//如果是ESC，则退出
+            PostMessage(hwnd,WM_DESTROY,0,0);
+        }
     }
     break;
     case WM_PAINT: {
@@ -349,6 +366,7 @@ LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT message, WPARAM wParam, LPARAM
     case WM_TIMER: {
         RECT rect;
         GetClientRect(hwnd,&rect);
+        ShowWindow(hwnd,SW_SHOW);
         SetWindowPos(hwnd, HWND_TOPMOST, 1, 1, 1, 1,SWP_NOSIZE|SWP_NOMOVE);
     }
     break;
@@ -356,7 +374,6 @@ LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT message, WPARAM wParam, LPARAM
         not_program_move=true;
         MoveWindow(hwnd,1-WIDTH,1-HEIGHT, WIDTH, HEIGHT, FALSE);// screen_height-5
         ShowWindow(hwnd,SW_HIDE);
-        ShowWindow(hwnd,SW_SHOW);
         is_hide=true;
     }
     break;
@@ -413,8 +430,12 @@ LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT message, WPARAM wParam, LPARAM
         }
     }
     break;
+    case WM_RBUTTONUP:{
+        init(hwnd);
+    }
+    break;
     case WM_DESTROY:
-        KillTimer(hwnd,0);
+        quit(hwnd);
         PostQuitMessage (0);       /* send a WM_QUIT to the message queue */
         break;
     default:                      /* for messages that we don't deal with */
